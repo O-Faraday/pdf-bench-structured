@@ -1,0 +1,44 @@
+[project]
+name = "pdf-bench"
+version = "0.1.0"
+description = "Benchmark of structured PDF extraction: synthetic documents with an element-level ground truth"
+readme = "README.md"
+authors = [
+    { name = "Claude", email = "noreply@anthropic.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.11.0",
+    "beautifulsoup4>=4.15.0",
+    "databricks-sdk>=0.149.0",
+    "docling>=2.135.0",
+    "google-genai>=2.28.0",
+    "landingai-ade>=1.18.1",
+    "llama-cloud>=2.8",
+    "markdown-it-py>=4.2.0",
+    "matplotlib>=3.11.2",
+    "mistralai>=3.1.0",
+    "openai>=3.26.0",
+    "opendataloader-pdf[hybrid]>=2.5.12",
+    "pillow>=12.3.0",
+    "pymupdf>=1.28.2",
+    "pymupdf4llm>=1.28.2",
+    "pypdfium2>=5.14.0",
+    "python-dotenv>=1.2.4",
+    "rapidfuzz>=3.14.6",
+    "reportlab>=5.0.1",
+    "seaborn>=0.13.2",
+    "streamlit>=1.65.0",
+]
+
+[project.scripts]
+pdf-bench = "pdf_bench:main"
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

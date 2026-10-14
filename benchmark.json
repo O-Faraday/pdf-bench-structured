@@ -1,0 +1,80 @@
+{
+ "parsers": [
+  "pymupdf4llm",
+  "pymupdf4llm_max",
+  "docling",
+  "claude",
+  "gemini",
+  "landingai_ade",
+  "llamaparse",
+  "opendataloader"
+ ],
+ "options": {},
+ "allow_hosted": true,
+ "docs_dir": "data/structured_final_model",
+ "docs_count": null,
+ "docs_seed": 0,
+ "docs_only": [
+  "constat",
+  "rapport",
+  "table_nested",
+  "table_merged",
+  "forms",
+  "headings",
+  "lists",
+  "table_simple",
+  "table_borderless",
+  "table_multipage",
+  "links",
+  "footnotes",
+  "figures",
+  "columns",
+  "running",
+  "scan"
+ ],
+ "variants": {
+  "odr:gpt-5.6-terra": {
+   "parser": "opendocrouter",
+   "options": {
+    "model": "openai/gpt-5.6-terra"
+   }
+  },
+  "odr:mineru2.5-pro": {
+   "parser": "opendocrouter",
+   "options": {
+    "model": "opendatalab/mineru2.5-pro"
+   }
+  },
+  "odr:mistral-ocr-4-1-annotations": {
+   "parser": "opendocrouter",
+   "options": {
+    "model": "mistral/mistral-ocr-4-1-annotations"
+   }
+  },
+  "odr:infinity-parser2-flash": {
+   "parser": "opendocrouter",
+   "options": {
+    "model": "infly/infinity-parser2-flash"
+   }
+  },
+  "odr:dots.mocr": {
+   "parser": "opendocrouter",
+   "options": {
+    "model": "rednote-hilab/dots.mocr"
+   }
+  },
+  "odr:paddleocr-vl-1.6": {
+   "parser": "opendocrouter",
+   "options": {
+    "model": "paddlepaddle/paddleocr-vl-1.6"
+   }
+  }
+ },
+ "docs_selected": [],
+ "postprocess": [
+  "running_text",
+  "merge_tables",
+  "lists",
+  "heading_levels"
+ ]
+}
