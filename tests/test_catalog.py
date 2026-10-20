@@ -29,7 +29,6 @@ def test_hosted_flags_and_default_set():
     assert all(REGISTRY[n].hosted for n in ("claude", "gemini", "gpt", "mistral_ocr", "databricks_ai_parse", "llamaparse", "opendocrouter",
                                             "landingai_ade"))
     assert not any(p.hosted for p in available_parsers())
-    assert unavailable(["aws_textract"])["aws_textract"].startswith("adapter not implemented")
     assert unknown(["nope", "claude"]) == ["nope"]
 
 

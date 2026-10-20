@@ -202,7 +202,7 @@ def test_analysis_files(tmp_path, monkeypatch):
     assert data["missing"] == [{"model": "pymupdf4llm", "pdf": "headings.pdf"}]
     run = data["runs"][0]
     assert run["output"] and run["recovered"] and {"kind", "structure", "evidence"} <= set(run["rows"][0])
-    assert "headings.gt" not in md.read_text() and "pymupdf4llm / headings.pdf: no saved answer" in md.read_text(encoding="utf-8")
+    assert "headings.gt" not in md.read_text(encoding="utf-8") and "pymupdf4llm / headings.pdf: no saved answer" in md.read_text(encoding="utf-8")
     # checkboxes are found as text, never marked: flagged as a doubt about the score
     assert any("checkbox" in f and "content 1.0" in f for f in data["flags"])
 

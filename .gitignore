@@ -16,5 +16,11 @@ data/
 # Secrets
 .env
 runs/
+
+# Claude Code (personal files)
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Benchmark outputs (local, never committed)
 results/
 analysis/
